@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	"github.com/coreos/go-etcd/etcd"
+	"github.com/taskgraph/taskgraph"
 	"github.com/taskgraph/taskgraph/controller"
 	"github.com/taskgraph/taskgraph/example/bwmf"
 	pb "github.com/taskgraph/taskgraph/example/bwmf/proto"
@@ -45,14 +46,14 @@ func TestBWMF(t *testing.T) {
 	}
 	for i := uint64(0); i < numOfTasks; i++ {
 		go drive(
-			t, 
-			job, 
-			etcdURLs, 
-			tb, 
-			map[string]int{
-    			"master" : topo.NewFullTopologyOfMaster(numOfTasks))
-				"neighbor" : topo.NewFullTopologyOfNeighbor(numOfTasks)
-			}
+			t,
+			job,
+			etcdURLs,
+			tb,
+			map[string]taskgraph.Topology{
+				"Master":    topo.NewFullTopologyOfMaster(numOfTasks),
+				"Neighbors": topo.NewFullTopologyOfNeighbor(numOfTasks),
+			},
 		)
 	}
 
