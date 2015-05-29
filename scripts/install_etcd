@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mkdir .bin
+pushd .bin
+curl -L https://github.com/coreos/etcd/releases/download/v${ETCD_BIN_VERSION}/etcd-v${ETCD_BIN_VERSION}-linux-amd64.tar.gz -o etcd-v${ETCD_BIN_VERSION}-linux-amd64.tar.gz
+tar xzvf etcd-v${ETCD_BIN_VERSION}-linux-amd64.tar.gz
+mv etcd-v${ETCD_BIN_VERSION}-linux-amd64/etcd .
+popd

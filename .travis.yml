@@ -1,0 +1,12 @@
+language: go
+
+go:
+  - 1.4
+
+env: ETCD_BIN_VERSION=2.0.11
+
+before_script:
+  - scripts/install_etcd
+
+script:
+  - scripts/run_test
