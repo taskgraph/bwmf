@@ -32,10 +32,10 @@ if [ -d "$ETCDTESTDIR" ]; then
   rm -r $ETCDTESTDIR
 fi
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    .script/bin/etcd-darwin --data-dir $ETCDTESTDIR > /dev/null 2>&1 &
+if [ -e ".bin/etcd" ]; then
+    .bin/etcd --data-dir $ETCDTESTDIR > /dev/null 2>&1 &
 else
-    .script/bin/etcd-linux --data-dir $ETCDTESTDIR > /dev/null 2>&1 &
+    etcd --data-dir $ETCDTESTDIR > /dev/null 2>&1 &
 fi
 
 for i in $(seq 10); do
@@ -53,10 +53,5 @@ else
 fi
 
 # testing
-go test -v ./controller
-go test -v ./framework
 go test -v ./integration
-go test -v ./op
-go test -v ./filesystem
-go test -v ./example/topo
-go test -v ./example/bwmf
+go test -v ./bwmf

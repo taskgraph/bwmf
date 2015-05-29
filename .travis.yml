@@ -3,11 +3,10 @@ language: go
 go:
   - 1.4
 
-install:
-  - .script/dep.sh
+env: ETCD_BIN_VERSION=2.0.11
 
 before_script:
-  - mkdir .tmp
+  - scripts/install_etcd
 
 script:
-  - .script/test
+  - scripts/run_test
