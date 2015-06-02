@@ -9,8 +9,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/taskgraph/taskgraph/example/bwmf"
-	pb "github.com/taskgraph/taskgraph/example/bwmf/proto"
+	"github.com/taskgraph/bwmf/bwmf"
+	pb "github.com/taskgraph/bwmf/proto"
 	fs "github.com/taskgraph/taskgraph/filesystem"
 )
 

@@ -1,7 +1,7 @@
 package bwmf
 
 import (
-	pb "github.com/taskgraph/taskgraph/example/bwmf/proto"
+	pb "github.com/taskgraph/bwmf/proto"
 	"testing"
 )
 

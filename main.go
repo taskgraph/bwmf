@@ -11,14 +11,13 @@ import (
 	"github.com/coreos/go-etcd/etcd"
 	"github.com/taskgraph/taskgraph/controller"
 
-	"github.com/taskgraph/taskgraph/example/bwmf"
+	"github.com/taskgraph/bwmf/bwmf"
 	"github.com/taskgraph/taskgraph/example/topo"
 	"github.com/taskgraph/taskgraph/filesystem"
 	"github.com/taskgraph/taskgraph/framework"
 )
 
 func main() {
-
 	etcdUrlList := flag.String("etcd_urls", "", "ETCD server lists, sep by a comma.")
 	jobName := flag.String("job_name", "bwmf", "Job name in etcd path.")
 	jobType := flag.String("job_type", "c", "Job type, either 'c' for controller or 't' for task.")
