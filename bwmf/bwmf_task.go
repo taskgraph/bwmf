@@ -10,7 +10,7 @@ import (
 
 	"github.com/golang/protobuf/proto"
 	"github.com/taskgraph/taskgraph"
-	pb "github.com/taskgraph/taskgraph/example/bwmf/proto"
+	pb "github.com/taskgraph/bwmf/proto"
 	"github.com/taskgraph/taskgraph/filesystem"
 	"github.com/taskgraph/taskgraph/op"
 	"golang.org/x/net/context"

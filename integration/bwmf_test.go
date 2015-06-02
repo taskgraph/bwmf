@@ -6,8 +6,8 @@ import (
 	"github.com/coreos/go-etcd/etcd"
 	"github.com/taskgraph/taskgraph"
 	"github.com/taskgraph/taskgraph/controller"
-	"github.com/taskgraph/taskgraph/example/bwmf"
-	pb "github.com/taskgraph/taskgraph/example/bwmf/proto"
+	"github.com/taskgraph/bwmf/bwmf"
+	pb "github.com/taskgraph/bwmf/proto"
 	"github.com/taskgraph/taskgraph/example/topo"
 	"github.com/taskgraph/taskgraph/filesystem"
 )

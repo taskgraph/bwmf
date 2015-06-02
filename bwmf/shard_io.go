@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 
 	"github.com/golang/protobuf/proto"
-	pb "github.com/taskgraph/taskgraph/example/bwmf/proto"
+	pb "github.com/taskgraph/bwmf/proto"
 	fs "github.com/taskgraph/taskgraph/filesystem"
 )
 

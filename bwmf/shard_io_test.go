@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	pb "github.com/taskgraph/taskgraph/example/bwmf/proto"
+	pb "github.com/taskgraph/bwmf/proto"
 	"github.com/taskgraph/taskgraph/filesystem"
 )
 
