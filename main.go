@@ -18,7 +18,6 @@ import (
 )
 
 func main() {
-
 	etcdUrlList := flag.String("etcd_urls", "", "ETCD server lists, sep by a comma.")
 	jobName := flag.String("job_name", "bwmf", "Job name in etcd path.")
 	jobType := flag.String("job_type", "c", "Job type, either 'c' for controller or 't' for task.")

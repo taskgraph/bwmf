@@ -17,7 +17,6 @@ func createListener(t *testing.T) net.Listener {
 }
 
 func drive(t *testing.T, jobName string, etcds []string, taskBuilder taskgraph.TaskBuilder, topo map[string]taskgraph.Topology) {
-
 	bootstrap := framework.NewBootStrap(jobName, etcds, createListener(t), nil)
 	bootstrap.SetTaskBuilder(taskBuilder)
 	for i, _ := range topo {
