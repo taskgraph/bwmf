@@ -52,6 +52,9 @@ func (m *Response) GetShard() *MatrixShard {
 	return nil
 }
 
+// For dense matrix, row-major storage is used.
+// For sparse matrix, we use the same storage format as MATLAB[1].
+// [1]: http://www.mathworks.com/help/matlab/matlab_external/matlab-data.html#f47606
 type MatrixShard struct {
 	IsSparse bool      `protobuf:"varint,1,opt,name=is_sparse" json:"is_sparse,omitempty"`
 	M        uint32    `protobuf:"varint,2,opt,name=m" json:"m,omitempty"`
